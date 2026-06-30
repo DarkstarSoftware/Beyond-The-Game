@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Season Locker — Save the season as it happens</title>
+<meta name="description" content="The easiest way for sports families to save the season as it happens. Capture photos and videos, organize by player and season, and turn them into albums, digital-frame exports, and printed keepsake books." />
+<style>
+  :root {
+    --brand: #1A3CDC; --brand-soft: #DCE5FB; --ink: #0C1730; --muted: #5B6377;
+    --bg: #F4F6FA; --card: #FFFFFF; --border: #E2E7F2;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+         color: var(--ink); background: var(--bg); line-height: 1.6; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+
+  header { padding: 22px 0; }
+  .brandrow { display: flex; align-items: center; justify-content: space-between; }
+  .brand { font-weight: 800; font-size: 1.2rem; letter-spacing: -.01em; }
+  nav a { color: var(--muted); text-decoration: none; margin-left: 20px; font-weight: 600; font-size: .95rem; }
+  nav a:hover { color: var(--brand); }
+
+  .hero { text-align: center; padding: 56px 0 40px; }
+  .hero h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); line-height: 1.08; letter-spacing: -.02em; margin: 0 0 16px; }
+  .hero p { font-size: 1.2rem; color: var(--muted); max-width: 640px; margin: 0 auto 28px; }
+  .cta { display:inline-block; background: var(--brand); color:#fff; text-decoration:none;
+         padding: 14px 26px; border-radius: 999px; font-weight: 700; font-size: 1.05rem; }
+  .cta.secondary { background: transparent; color: var(--brand); border: 1.5px solid var(--brand); margin-left: 10px; }
+
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin: 40px 0; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 24px; }
+  .card h3 { margin: 0 0 6px; font-size: 1.15rem; }
+  .card p { margin: 0; color: var(--muted); }
+  .emoji { font-size: 1.6rem; }
+
+  .outputs { background: var(--card); border: 1px solid var(--border); border-radius: 24px; padding: 36px; margin: 40px 0; }
+  .outputs h2 { margin-top: 0; font-size: 1.7rem; }
+  .outgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px; }
+  .pill { display:inline-block; background: var(--brand-soft); color: var(--brand); font-weight:700;
+          padding: 4px 12px; border-radius: 999px; font-size: .85rem; margin-bottom: 8px; }
+
+  footer { border-top: 1px solid var(--border); margin-top: 50px; padding: 28px 0 60px; color: var(--muted); font-size: .92rem; }
+  footer a { color: var(--muted); text-decoration: none; margin-right: 18px; }
+  footer a:hover { color: var(--brand); }
+
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#FFFFFF; --muted:#A9B4D0; --bg:#0A1129; --card:#131C36; --border:#1F2A4D; --brand:#6E8BFF; --brand-soft:#223067; }
+    body { background: var(--bg); }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brandrow">
+      <div class="brand">🔒 Season Locker</div>
+      <nav>
+        <a href="./support.html">Support</a>
+        <a href="./privacy-policy.html">Privacy</a>
+        <a href="./terms-of-service.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Save the season as it happens.</h1>
+    <p>The easiest way for sports families to capture every game and practice, organize it by player and season, and turn the year into something you can hold onto.</p>
+    <a class="cta" href="#download">Get the App</a>
+    <a class="cta secondary" href="./support.html">Learn More</a>
+  </section>
+
+  <section class="features">
+    <div class="card"><div class="emoji">📸</div><h3>Capture all season</h3><p>Unlimited photos and videos from games, practices, and team moments — saved in seconds.</p></div>
+    <div class="card"><div class="emoji">🗂️</div><h3>Organized automatically</h3><p>Group by player, season, event, and tag. A clean timeline, no confusing folders.</p></div>
+    <div class="card"><div class="emoji">👨‍👩‍👧‍👦</div><h3>Every kid, one family</h3><p>Add multiple players and switch between them. Secure cloud backup keeps it all in sync.</p></div>
+  </section>
+
+  <section class="outputs">
+    <h2>Turn the season into a keepsake</h2>
+    <p style="color:var(--muted);max-width:620px;">When the season wraps, your saved moments become something real.</p>
+    <div class="outgrid">
+      <div><span class="pill">Digital album</span><p style="margin:0;color:var(--muted)">Export a clean PDF album of the whole season to share or save.</p></div>
+      <div><span class="pill">Digital frame</span><p style="margin:0;color:var(--muted)">Package favorites into a rotating set for a smart photo frame.</p></div>
+      <div><span class="pill">Printed book</span><p style="margin:0;color:var(--muted)">Order a premium hardcover season book, shipped to your door.</p></div>
+    </div>
+  </section>
+
+  <section id="download" class="hero" style="padding-top:10px;">
+    <h1 style="font-size:1.8rem;">Ready to lock in the season?</h1>
+    <p>Available on iPhone.</p>
+    <a class="cta" href="#">Download on the App Store</a>
+    <p style="font-size:.9rem;margin-top:14px;">(Replace this button with your App Store link once the app is live.)</p>
+  </section>
+
+  <footer>
+    <div>
+      <a href="./privacy-policy.html">Privacy Policy</a>
+      <a href="./terms-of-service.html">Terms of Service</a>
+      <a href="./support.html">Support</a>
+      <a href="mailto:toddfleury1979@gmail.com">Contact</a>
+    </div>
+    <p style="margin-top:14px;">© 2026 Todd Fleury. Season Locker. All rights reserved.</p>
+  </footer>
+
+</div>
+</body>
+</html>
