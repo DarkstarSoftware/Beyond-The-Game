@@ -20,3 +20,15 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.14 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Meta Pixel: track outbound clicks to the App Store / Google Play as a custom event.
+// This lets you see, in Events Manager, which platform people actually click through to
+// after landing on the page — not just that they viewed the page.
+document.querySelectorAll('a[data-store]').forEach(link => {
+  link.addEventListener('click', () => {
+    const store = link.getAttribute('data-store'); // "ios" or "android"
+    if (typeof fbq === 'function') {
+      fbq('trackCustom', 'StoreClick', { store });
+    }
+  });
+});

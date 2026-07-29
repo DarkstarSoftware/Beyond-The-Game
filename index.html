@@ -4,16 +4,81 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#07162f" />
-  <meta name="description" content="Season Locker helps sports families save photos, milestones, and memories by player and season, then turn them into digital albums and printed keepsakes." />
+
+  <!-- Primary SEO -->
+  <title>Season Locker — Youth Sports Photo, Stats & Memory Organizer App</title>
+  <meta name="description" content="Season Locker helps sports families save photos, milestones, and memories by player and season, then turn them into digital albums and printed keepsakes. Available on iPhone and Android." />
+  <link rel="canonical" href="https://darkstarsoftware.github.io/Beyond-The-Game/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Season Locker — Your child's season deserves more than a camera roll" />
   <meta property="og:description" content="Save every game, milestone, and team moment in one place. Available now on the App Store and Google Play." />
-  <meta property="og:image" content="assets/season-locker-hero.png" />
+  <meta property="og:image" content="https://darkstarsoftware.github.io/Beyond-The-Game/assets/season-locker-hero.png" />
+  <meta property="og:url" content="https://darkstarsoftware.github.io/Beyond-The-Game/" />
   <meta property="og:type" content="website" />
-  <title>Season Locker — Sports Memories & Keepsakes</title>
+  <meta property="og:site_name" content="Season Locker" />
+
+  <!-- Twitter/X card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Season Locker — Your child's season deserves more than a camera roll" />
+  <meta name="twitter:description" content="Save every game, milestone, and team moment in one place. Available now on the App Store and Google Play." />
+  <meta name="twitter:image" content="https://darkstarsoftware.github.io/Beyond-The-Game/assets/season-locker-hero.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured data: helps Google understand this is a mobile app, improves rich result eligibility -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Season Locker",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "LifestyleApplication",
+    "description": "Season Locker helps sports families save photos, milestones, and memories by player and season, then turn them into digital albums and printed keepsakes.",
+    "url": "https://darkstarsoftware.github.io/Beyond-The-Game/",
+    "image": "https://darkstarsoftware.github.io/Beyond-The-Game/assets/season-locker-hero.png",
+    "author": {
+      "@type": "Organization",
+      "name": "Darkstar Software"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "url": "https://apps.apple.com/us/app/season-locker/id6784711605"
+      },
+      {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "url": "https://play.google.com/store/apps/details?id=app.seasonlocker.android"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1745227083270255');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1745227083270255&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -21,7 +86,7 @@
   <header class="site-header" id="top">
     <div class="container nav-wrap">
       <a class="brand" href="#top" aria-label="Season Locker home">
-        <img src="assets/season-locker-icon.png" alt="" width="46" height="46" />
+        <img src="assets/season-locker-icon.png" alt="Season Locker app icon" width="46" height="46" />
         <span>Season Locker</span>
       </a>
 
@@ -49,11 +114,11 @@
           <p class="hero-lede">Save every game, practice, milestone, and team moment by player and season—then turn the memories into digital albums and keepsakes your family can revisit for years.</p>
 
           <div class="store-row" aria-label="Download options">
-            <a class="store-button apple" href="https://apps.apple.com/us/app/season-locker/id6784711605" target="_blank" rel="noopener" aria-label="Download Season Locker on the App Store">
+            <a class="store-button apple" href="https://apps.apple.com/us/app/season-locker/id6784711605" target="_blank" rel="noopener" aria-label="Download Season Locker on the App Store" data-store="ios">
               <span class="store-icon" aria-hidden="true">●</span>
               <span><small>Download on the</small><strong>App Store</strong></span>
             </a>
-            <a class="store-button google" href="https://play.google.com/store/apps/details?id=app.seasonlocker.android" target="_blank" rel="noopener" aria-label="Get Season Locker on Google Play">
+            <a class="store-button google" href="https://play.google.com/store/apps/details?id=app.seasonlocker.android" target="_blank" rel="noopener" aria-label="Get Season Locker on Google Play" data-store="android">
               <span class="play-mark" aria-hidden="true"></span>
               <span><small>Get it on</small><strong>Google Play</strong></span>
             </a>
@@ -192,8 +257,8 @@
           <p>Season Locker is available now for iPhone, iPad, and Android.</p>
         </div>
         <div class="cta-actions">
-          <a class="primary-button" href="https://apps.apple.com/us/app/season-locker/id6784711605" target="_blank" rel="noopener">Download on the App Store</a>
-          <a class="secondary-button" href="https://play.google.com/store/apps/details?id=app.seasonlocker.android" target="_blank" rel="noopener">Get it on Google Play</a>
+          <a class="primary-button" href="https://apps.apple.com/us/app/season-locker/id6784711605" target="_blank" rel="noopener" data-store="ios">Download on the App Store</a>
+          <a class="secondary-button" href="https://play.google.com/store/apps/details?id=app.seasonlocker.android" target="_blank" rel="noopener" data-store="android">Get it on Google Play</a>
         </div>
       </div>
     </section>
@@ -203,7 +268,7 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <a class="brand" href="#top">
-          <img src="assets/season-locker-icon.png" alt="" width="42" height="42" />
+          <img src="assets/season-locker-icon.png" alt="Season Locker app icon" width="42" height="42" />
           <span>Season Locker</span>
         </a>
         <p>Sports memories and keepsakes, built by Darkstar Software.</p>
