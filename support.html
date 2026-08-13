@@ -1,154 +1,1055 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#07162f" />
 
-  <title>Support — Season Locker</title>
-  <meta name="description" content="Get help with Season Locker: adding memories, tracking multiple players, cloud backup, printed keepsake books, and account questions." />
-  <link rel="canonical" href="https://darkstarsoftware.github.io/Beyond-The-Game/support.html" />
+  <title>Support — SportsJurni</title>
+
+  <meta
+    name="description"
+    content="Get help with SportsJurni, including memories, players, seasons, cloud backup, albums, printed books, account deletion, and more."
+  />
+
+  <meta name="theme-color" content="#1746D1" />
   <meta name="robots" content="index, follow" />
 
-  <meta property="og:title" content="Season Locker — Support" />
-  <meta property="og:description" content="Get help with Season Locker: adding memories, tracking multiple players, cloud backup, printed keepsake books, and account questions." />
-  <meta property="og:image" content="https://darkstarsoftware.github.io/Beyond-The-Game/assets/season-locker-hero.png" />
-  <meta property="og:url" content="https://darkstarsoftware.github.io/Beyond-The-Game/support.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Season Locker" />
+  <link
+    rel="canonical"
+    href="https://darkstarsoftware.github.io/Beyond-The-Game/support.html"
+  />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Shared SportsJurni Design System -->
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1745227083270255');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1745227083270255&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
+  <style>
+    /* =========================================================
+       SUPPORT PAGE
+    ========================================================== */
+
+    .support-hero {
+      padding: 92px 0 70px;
+
+      background:
+        radial-gradient(
+          circle at 88% 16%,
+          rgba(0, 194, 255, .16),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 76% 72%,
+          rgba(124, 255, 61, .10),
+          transparent 28%
+        ),
+        linear-gradient(
+          145deg,
+          #FFFFFF 0%,
+          #F3F8FF 55%,
+          #EBFCF9 100%
+        );
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .support-hero-inner {
+      max-width: 860px;
+    }
+
+    .support-hero h1 {
+      margin-bottom: 18px;
+
+      font-size:
+        clamp(
+          2.8rem,
+          6vw,
+          4.8rem
+        );
+    }
+
+    .support-hero .hero-lede {
+      margin-bottom: 26px;
+
+      font-size: 1.15rem;
+    }
+
+    .support-back {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      margin-bottom: 26px;
+
+      color: var(--blue-700);
+
+      font-weight: 700;
+
+      text-decoration: none;
+    }
+
+    .support-back:hover {
+      text-decoration: underline;
+    }
+
+    .support-contact-row {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 16px;
+
+      align-items: center;
+
+      margin-top: 28px;
+    }
+
+    .support-contact-row .primary-button {
+      background: var(--brand-gradient);
+
+      color: #FFFFFF;
+
+      min-width: 180px;
+
+      box-shadow:
+        0 12px 28px rgba(20, 89, 245, .20);
+    }
+
+    .support-response {
+      color: var(--muted);
+
+      font-size: .94rem;
+    }
+
+
+    /* =========================================================
+       FAQ
+    ========================================================== */
+
+    .faq-section {
+      background: var(--background);
+    }
+
+    .faq-grid {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1fr)
+        260px;
+
+      gap: 70px;
+
+      align-items: start;
+    }
+
+    .faq-list {
+      display: grid;
+
+      gap: 16px;
+    }
+
+    .faq-card {
+      padding: 26px 28px;
+
+      background: var(--white);
+
+      border: 1px solid var(--line);
+
+      border-radius: 20px;
+
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-card h3 {
+      margin-bottom: 8px;
+
+      color: var(--navy-950);
+
+      font-size: 1.18rem;
+    }
+
+    .faq-card p {
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 1rem;
+    }
+
+    .faq-card a {
+      color: var(--blue-700);
+
+      font-weight: 700;
+    }
+
+
+    /* =========================================================
+       SUPPORT SIDEBAR
+    ========================================================== */
+
+    .support-sidebar {
+      position: sticky;
+
+      top: 108px;
+
+      padding: 24px;
+
+      background: var(--white);
+
+      border: 1px solid var(--line);
+
+      border-radius: 20px;
+
+      box-shadow: var(--shadow-sm);
+    }
+
+    .support-sidebar strong {
+      display: block;
+
+      margin-bottom: 12px;
+
+      color: var(--navy-950);
+
+      font-family: Manrope, sans-serif;
+    }
+
+    .support-sidebar nav {
+      display: grid;
+
+      gap: 4px;
+    }
+
+    .support-sidebar a {
+      padding: 8px 10px;
+
+      border-radius: 9px;
+
+      color: var(--muted);
+
+      text-decoration: none;
+
+      font-size: .92rem;
+
+      font-weight: 600;
+    }
+
+    .support-sidebar a:hover {
+      color: var(--blue-700);
+
+      background: var(--soft-blue);
+    }
+
+
+    /* =========================================================
+       CONTACT CARD
+    ========================================================== */
+
+    .support-contact-card {
+      margin-top: 56px;
+
+      padding: 38px;
+
+      border-radius: 28px;
+
+      color: var(--white);
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--navy-950),
+          #113A71
+        );
+
+      box-shadow: var(--shadow-brand);
+    }
+
+    .support-contact-card h2 {
+      color: var(--white);
+
+      margin-bottom: 14px;
+    }
+
+    .support-contact-card p {
+      color: #C7D5E7;
+
+      margin-bottom: 24px;
+    }
+
+    .support-contact-card .primary-button {
+      background: #FFFFFF;
+
+      color: var(--navy-950);
+    }
+
+
+    /* =========================================================
+       LEGAL STRIP
+    ========================================================== */
+
+    .support-legal {
+      background:
+        linear-gradient(
+          135deg,
+          var(--soft-blue),
+          var(--soft-cyan),
+          var(--soft-green)
+        );
+    }
+
+    .support-legal a {
+      color: var(--blue-700);
+
+      font-weight: 700;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================== */
+
+    @media (max-width: 900px) {
+
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .support-sidebar {
+        position: static;
+
+        order: -1;
+      }
+
+    }
+
+
+    @media (max-width: 620px) {
+
+      .support-hero {
+        padding:
+          62px 0
+          50px;
+      }
+
+      .faq-card {
+        padding: 22px;
+      }
+
+      .support-contact-card {
+        padding: 28px;
+      }
+
+      .support-contact-row {
+        align-items: stretch;
+
+        flex-direction: column;
+      }
+
+      .support-contact-row .primary-button {
+        width: 100%;
+      }
+
+    }
+
+
+    /* =========================================================
+       DARK MODE
+    ========================================================== */
+
+    @media (prefers-color-scheme: dark) {
+
+      .support-hero {
+        background:
+          radial-gradient(
+            circle at 88% 16%,
+            rgba(0, 194, 255, .10),
+            transparent 28%
+          ),
+          radial-gradient(
+            circle at 76% 72%,
+            rgba(124, 255, 61, .06),
+            transparent 28%
+          ),
+          linear-gradient(
+            145deg,
+            #07111F,
+            #0D1B2A
+          );
+
+        border-bottom-color:
+          var(--line-dark);
+      }
+
+      .faq-section {
+        background: #07111F;
+      }
+
+      .faq-card,
+      .support-sidebar {
+        background: #0D1B2A;
+
+        border-color: var(--line-dark);
+      }
+
+      .faq-card h3,
+      .support-sidebar strong {
+        color: #F8FAFC;
+      }
+
+      .faq-card p,
+      .support-response {
+        color: #CBD5E1;
+      }
+
+      .support-sidebar a {
+        color: #CBD5E1;
+      }
+
+      .support-sidebar a:hover {
+        color: var(--cyan-400);
+
+        background: #13243A;
+      }
+
+      .support-legal {
+        background: #0D1B2A;
+      }
+
+    }
+  </style>
 </head>
+
+
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- =========================================================
+       ACCESSIBILITY
+  ========================================================== -->
+
+  <a class="skip-link" href="#main">
+    Skip to main content
+  </a>
+
+
+  <!-- =========================================================
+       SAME HEADER / NAV AS INDEX
+  ========================================================== -->
 
   <header class="site-header" id="top">
+
     <div class="container nav-wrap">
-      <a class="brand" href="index.html" aria-label="Season Locker home">
-        <img src="assets/season-locker-icon.png" alt="Season Locker app icon" width="46" height="46" />
-        <span>Season Locker</span>
+
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="SportsJurni home"
+      >
+
+        <img
+          src="assets/sportsjurni-icon.png"
+          alt="SportsJurni app icon"
+          width="46"
+          height="46"
+        />
+
+        <span>
+          SportsJurni
+        </span>
+
       </a>
 
+
       <nav aria-label="Main navigation">
-        <button class="menu-button" aria-expanded="false" aria-controls="site-menu">Menu</button>
-        <div class="site-menu" id="site-menu">
-          <a href="index.html#how-it-works">How it works</a>
-          <a href="index.html#features">Features</a>
-          <a href="index.html#story">Our story</a>
-          <a href="support.html">Support</a>
-          <a class="nav-cta" href="index.html#download">Get the app</a>
+
+        <button
+          class="menu-button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+        >
+          Menu
+        </button>
+
+
+        <div
+          class="site-menu"
+          id="site-menu"
+        >
+
+          <a href="index.html#how-it-works">
+            How it works
+          </a>
+
+          <a href="index.html#features">
+            Features
+          </a>
+
+          <a href="index.html#story">
+            Our story
+          </a>
+
+          <a
+            href="support.html"
+            aria-current="page"
+          >
+            Support
+          </a>
+
+          <a
+            class="nav-cta"
+            href="index.html#download"
+          >
+            Get the app
+          </a>
+
         </div>
+
       </nav>
+
     </div>
+
   </header>
 
+
+  <!-- =========================================================
+       MAIN
+  ========================================================== -->
+
   <main id="main">
-    <section class="section-pad compact">
-      <div class="container">
-        <a class="secondary-button" href="index.html" style="display:inline-block; margin-bottom: 1.5rem;">← Back to Season Locker</a>
 
-        <p class="eyebrow">We're here to help</p>
-        <h1>Season Locker Support</h1>
-        <p class="hero-lede">Need a hand? We're happy to help.</p>
 
-        <p style="margin-top: 1.5rem;">
-          <a class="primary-button" href="mailto:toddfleury1979@gmail.com">Email Support</a>
+    <!-- =======================================================
+         HERO
+    ======================================================== -->
+
+    <section class="support-hero">
+
+      <div class="container support-hero-inner">
+
+
+        <a
+          class="support-back"
+          href="index.html"
+        >
+          ← Back to SportsJurni
+        </a>
+
+
+        <p class="eyebrow">
+          We're here to help
         </p>
-        <p class="muted">toddfleury1979@gmail.com · We typically respond within 1–2 business days.</p>
-      </div>
-    </section>
 
-    <section class="steps section-pad" id="faq">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Common questions</p>
-          <h2>Everything you need to know.</h2>
+
+        <h1>
+          SportsJurni Support
+        </h1>
+
+
+        <p class="hero-lede">
+          Need help with your account, memories,
+          players, seasons, albums, or anything else?
+          We're happy to help.
+        </p>
+
+
+        <div class="support-contact-row">
+
+          <a
+            class="primary-button"
+            href="mailto:toddfleury1979@gmail.com"
+          >
+            Email Support
+          </a>
+
+
+          <span class="support-response">
+            toddfleury1979@gmail.com
+            · We typically respond within 1–2 business days.
+          </span>
+
         </div>
 
-        <ul class="check-list">
-          <li>
-            <strong>How do I add a memory?</strong>
-            <span>Tap <strong>Add Memory</strong> on the Home screen, choose a photo or video, add a title, notes, and tags, then Save.</span>
-          </li>
-          <li>
-            <strong>Can I track more than one child?</strong>
-            <span>Yes. Go to <strong>Profile → Players &amp; Seasons → Add Player</strong>, or use the switcher on the Home card to move between kids.</span>
-          </li>
-          <li>
-            <strong>How does cloud backup work?</strong>
-            <span>Create an account (Profile → "Sign in to back up"). Your players, seasons, and memories then sync securely across your signed-in devices. Without an account, your data stays only on your device.</span>
-          </li>
-          <li>
-            <strong>How do I order a printed book?</strong>
-            <span>Open <strong>Albums → Printed Book</strong>, tap <strong>Pay &amp; Order</strong>, enter your shipping address, and pay securely. Your book is printed and shipped by our partner.</span>
-          </li>
-          <li>
-            <strong>How do I get a digital album or a file for a digital frame?</strong>
-            <span>Use <strong>Preview Album → Export Digital Album</strong> (PDF) or <strong>Digital Frame → Create Frame Export</strong> (a zip of photos). Both open the share sheet so you can save or send them.</span>
-          </li>
-          <li>
-            <strong>How do I delete my account?</strong>
-            <span>Go to <strong>Profile → Delete account</strong>. This permanently erases your account and all associated data.</span>
-          </li>
-          <li>
-            <strong>What is your refund policy?</strong>
-            <span>Printed books are made to order. If your book arrives damaged or defective, email us within 30 days for a reprint or refund. See our <a href="terms-of-service.html">Terms of Service</a>.</span>
-          </li>
-        </ul>
       </div>
+
     </section>
 
-    <section class="privacy-strip section-pad compact">
-      <div class="container centered reveal">
-        <p class="eyebrow">Legal</p>
-        <p><a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-service.html">Terms of Service</a></p>
+
+    <!-- =======================================================
+         FAQ
+    ======================================================== -->
+
+    <section
+      class="faq-section section-pad"
+      id="faq"
+    >
+
+      <div class="container faq-grid">
+
+
+        <!-- FAQ CONTENT -->
+        <div>
+
+
+          <div class="section-heading reveal">
+
+            <p class="eyebrow">
+              Common questions
+            </p>
+
+            <h2>
+              Everything you need to know.
+            </h2>
+
+            <p>
+              Find quick answers to the most common
+              SportsJurni questions.
+            </p>
+
+          </div>
+
+
+          <div class="faq-list">
+
+
+            <!-- ADD MEMORY -->
+            <article
+              class="faq-card reveal"
+              id="add-memory"
+            >
+
+              <h3>
+                How do I add a memory?
+              </h3>
+
+              <p>
+                Tap <strong>Add Memory</strong>
+                from the Home screen, select your
+                photo or video, add a title,
+                notes, date, and any other details,
+                then save the memory to your athlete's
+                season.
+              </p>
+
+            </article>
+
+
+            <!-- PLAYERS -->
+            <article
+              class="faq-card reveal"
+              id="players"
+            >
+
+              <h3>
+                Can I track more than one child?
+              </h3>
+
+              <p>
+                Yes. Go to
+                <strong>Profile → Players &amp; Seasons → Add Player</strong>
+                to add another athlete.
+                You can then switch between players
+                and seasons throughout SportsJurni.
+              </p>
+
+            </article>
+
+
+            <!-- CLOUD BACKUP -->
+            <article
+              class="faq-card reveal"
+              id="backup"
+            >
+
+              <h3>
+                How does cloud backup work?
+              </h3>
+
+              <p>
+                Create or sign in to your SportsJurni account
+                to securely sync supported player,
+                season, and memory data across your
+                signed-in devices.
+              </p>
+
+            </article>
+
+
+            <!-- PRINTED BOOK -->
+            <article
+              class="faq-card reveal"
+              id="printed-book"
+            >
+
+              <h3>
+                How do I order a printed book?
+              </h3>
+
+              <p>
+                Open
+                <strong>Albums → Printed Book</strong>,
+                preview your book, enter the required
+                shipping information, and complete payment.
+                Your book is then prepared for printing
+                and shipment.
+              </p>
+
+            </article>
+
+
+            <!-- DIGITAL ALBUM -->
+            <article
+              class="faq-card reveal"
+              id="digital-album"
+            >
+
+              <h3>
+                How do I create a digital album
+                or digital-frame export?
+              </h3>
+
+              <p>
+                Use your Albums area to build a collection
+                from saved memories.
+                Digital albums and supported digital-frame
+                exports can then be saved or shared
+                from your device.
+              </p>
+
+            </article>
+
+
+            <!-- FAMILY SHARING -->
+            <article
+              class="faq-card reveal"
+              id="family-sharing"
+            >
+
+              <h3>
+                How does Family Sharing work?
+              </h3>
+
+              <p>
+                SportsJurni lets supported family members
+                contribute to the same athlete journey,
+                helping families keep players, seasons,
+                memories, and albums together.
+              </p>
+
+            </article>
+
+
+            <!-- STATS -->
+            <article
+              class="faq-card reveal"
+              id="stats"
+            >
+
+              <h3>
+                Can I track athlete stats and progress?
+              </h3>
+
+              <p>
+                Yes. SportsJurni includes tools for
+                recording athlete statistics and
+                following progress across seasons,
+                helping you see how their journey
+                develops over time.
+              </p>
+
+            </article>
+
+
+            <!-- DELETE ACCOUNT -->
+            <article
+              class="faq-card reveal"
+              id="delete-account"
+            >
+
+              <h3>
+                How do I delete my account?
+              </h3>
+
+              <p>
+                Go to
+                <strong>Profile → Delete account</strong>.
+                Account deletion permanently removes
+                your account and associated data
+                according to our
+                <a href="privacy-policy.html">
+                  Privacy Policy
+                </a>.
+              </p>
+
+            </article>
+
+
+            <!-- REFUNDS -->
+            <article
+              class="faq-card reveal"
+              id="refunds"
+            >
+
+              <h3>
+                What is your refund policy?
+              </h3>
+
+              <p>
+                Printed books are made to order.
+                If a printed product arrives damaged
+                or defective, contact us as soon as
+                possible so we can review the issue.
+                See our
+                <a href="terms-of-service.html">
+                  Terms of Service
+                </a>
+                for additional details.
+              </p>
+
+            </article>
+
+
+          </div>
+
+
+          <!-- =================================================
+               CONTACT
+          ================================================== -->
+
+          <div
+            class="support-contact-card reveal"
+            id="contact"
+          >
+
+            <p class="eyebrow">
+              Still need help?
+            </p>
+
+            <h2>
+              Talk to us.
+            </h2>
+
+            <p>
+              If you can't find the answer you need,
+              send us an email and include as much
+              detail as possible about the issue
+              you're experiencing.
+            </p>
+
+
+            <a
+              class="primary-button"
+              href="mailto:toddfleury1979@gmail.com"
+            >
+              Contact SportsJurni Support
+            </a>
+
+          </div>
+
+
+        </div>
+
+
+        <!-- ===================================================
+             SIDEBAR
+        ==================================================== -->
+
+        <aside class="support-sidebar">
+
+          <strong>
+            Quick help
+          </strong>
+
+
+          <nav aria-label="Support topics">
+
+            <a href="#add-memory">
+              Adding memories
+            </a>
+
+            <a href="#players">
+              Players & seasons
+            </a>
+
+            <a href="#backup">
+              Cloud backup
+            </a>
+
+            <a href="#printed-book">
+              Printed books
+            </a>
+
+            <a href="#digital-album">
+              Albums & digital frames
+            </a>
+
+            <a href="#family-sharing">
+              Family Sharing
+            </a>
+
+            <a href="#stats">
+              Stats & progress
+            </a>
+
+            <a href="#delete-account">
+              Delete account
+            </a>
+
+            <a href="#refunds">
+              Refunds
+            </a>
+
+            <a href="#contact">
+              Contact support
+            </a>
+
+          </nav>
+
+        </aside>
+
+
       </div>
+
     </section>
+
+
+    <!-- =======================================================
+         LEGAL
+    ======================================================== -->
+
+    <section class="support-legal section-pad compact">
+
+      <div class="container centered reveal">
+
+        <p class="eyebrow">
+          Legal & Privacy
+        </p>
+
+
+        <h2>
+          Your memories. Your control.
+        </h2>
+
+
+        <p>
+          Learn more about how SportsJurni
+          protects your family's information
+          and the terms that apply when using the App.
+        </p>
+
+
+        <p>
+          <a href="privacy-policy.html">
+            Privacy Policy
+          </a>
+
+          &nbsp; · &nbsp;
+
+          <a href="terms-of-service.html">
+            Terms of Service
+          </a>
+        </p>
+
+      </div>
+
+    </section>
+
+
   </main>
 
+
+  <!-- =========================================================
+       SAME FOOTER AS INDEX
+  ========================================================== -->
+
   <footer>
+
     <div class="container footer-grid">
+
+
       <div class="footer-brand">
-        <a class="brand" href="index.html">
-          <img src="assets/season-locker-icon.png" alt="Season Locker app icon" width="42" height="42" />
-          <span>Season Locker</span>
+
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="SportsJurni home"
+        >
+
+          <img
+            src="assets/sportsjurni-icon.png"
+            alt="SportsJurni app icon"
+            width="42"
+            height="42"
+          />
+
+          <span>
+            SportsJurni
+          </span>
+
         </a>
-        <p>Sports memories and keepsakes, built by Darkstar Software.</p>
+
+
+        <p>
+          Every sport. Every season. Every memory.
+          <br />
+          Built by Darkstar Software.
+        </p>
+
       </div>
-      <div class="footer-links" aria-label="Legal and support links">
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms-of-service.html">Terms of Service</a>
-        <a href="support.html">Support</a>
-        <a href="mailto:toddfleury1979@gmail.com">Contact</a>
+
+
+      <div
+        class="footer-links"
+        aria-label="Legal and support links"
+      >
+
+        <a href="privacy-policy.html">
+          Privacy Policy
+        </a>
+
+        <a href="terms-of-service.html">
+          Terms of Service
+        </a>
+
+        <a
+          href="support.html"
+          aria-current="page"
+        >
+          Support
+        </a>
+
+        <a href="mailto:toddfleury1979@gmail.com">
+          Contact
+        </a>
+
       </div>
+
+
     </div>
+
+
     <div class="container footer-bottom">
-      <span>© 2026 Darkstar Software. All rights reserved.</span>
-      <span>Made in Michigan for sports families everywhere.</span>
+
+      <span>
+        © 2026 Darkstar Software.
+        All rights reserved.
+      </span>
+
+      <span>
+        Made in Michigan for sports families everywhere.
+      </span>
+
     </div>
+
   </footer>
 
+
+  <!-- Same navigation + reveal logic as homepage -->
   <script src="script.js"></script>
+
 </body>
 </html>
